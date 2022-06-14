@@ -18,7 +18,9 @@ app.get('/' , function(req,res){
 // POST -> serve para incluir dados no servidor 
 
 app.post('/api', (req, res) => {
-    console.log('Chegou um post.');
+    console.log('Foi mandado :\n', req.body);
+    _key = req.body.key;
+    _key2 = req.body.key2;
 
     res.status(200).send(
     { success: 'true',
